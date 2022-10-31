@@ -43,6 +43,10 @@ button {
     margin-right: 10px;
     margin-bottom: 10px;
     color: whitesmoke;
+    max-height: 120px;
+    max-width: 360px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .buttons {
@@ -58,10 +62,10 @@ button {
     background-color: red;
 }
 
-#add,
-#minus,
-#product,
-#divide,
-#equals {
+.add,
+.minus,
+.product,
+.divide,
+.equals {
     background-color: orange;
 }
