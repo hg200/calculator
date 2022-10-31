@@ -1,0 +1,67 @@
+body {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    background-image: url(./grey-abstract-geometric-triangle-background-wallpaper-preview.jpeg);
+}
+
+.calculator {
+    background-color: black;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 400px;
+    border-radius: 38.5pt;
+}
+
+button {
+    background-color: gainsboro;
+    width: 87.5px;
+    height: 90px;
+    font-size: 25px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    height: 150px;
+    background-color: black;
+    margin: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    border-radius: 38.5pt;
+}
+
+.output {
+    font-size: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.buttons {
+    height: 430px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-style: none;
+}
+
+#clear {
+    background-color: red;
+}
+
+#add,
+#minus,
+#product,
+#divide,
+#equals {
+    background-color: orange;
+}
