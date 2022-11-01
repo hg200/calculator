@@ -1,18 +1,37 @@
-const buttons = Array.from(document.querySelectorAll("button"));
+const numButtons = Array.from(document.querySelectorAll(".num"));
+const operandButtons = Array.from(document.querySelectorAll(".operand"));
+const clear = document.querySelector("#clear");
+const equals = document.querySelector(".equals");
+const input = document.querySelector(".input");
 const output = document.querySelector(".output");
-for (let button of buttons) {
+for (let button of numButtons) {
     button.addEventListener("click", (e) => {
         let clicked = `${e.target.id}`
-        if (clicked != "clear") {
-            const p = document.createElement("p");
-            p.innerText = clicked;
-            output.appendChild(p);
-        } else {
-            output.innerHTML = "";
-        }
+        const p = document.createElement("p");
+        p.innerText = clicked;
+        output.appendChild(p);
+    });
+}
 
-
-
+for (let button of operandButtons) {
+    button.addEventListener("click", (e) => {
+        let clicked = `${e.target.id}`
+        const p = document.createElement("p");
+        p.innerText = clicked;
+        output.appendChild(p);
+        button.removeEventListener("click");
     });
 
 }
+
+clear.addEventListener("click", () => {
+    output.innerText = "";
+});
+
+equals.addEventListener("click", () => {
+    let equation = Array.from(output.innerHTML);
+    const p = document.querySelector("p");
+    let arr = ["<", ">", "p", "/"];
+    //equation.join(",");
+    console.log(equation);
+});
