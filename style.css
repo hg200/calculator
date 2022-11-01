@@ -33,15 +33,26 @@ button {
     background-color: black;
     margin: 10px;
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
     border-radius: 38.5pt;
+    gap: 30px;
+}
+
+.input {
+    color: whitesmoke;
+    font-size: 30px;
+    margin-right: 40px;
+    margin-top: 5px;
+    font-style: italic;
 }
 
 .output {
     font-size: 50px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 40px;
+    margin-bottom: 5px;
     color: whitesmoke;
     max-height: 120px;
     max-width: 360px;
@@ -60,6 +71,8 @@ button {
 
 #clear {
     background-color: red;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .add,
