@@ -9,7 +9,7 @@ for (let button of numButtons) {
         let clicked = `${e.target.id}`
         const p = document.createElement("p");
         p.innerText = clicked;
-        output.appendChild(p);
+        input.appendChild(p);
     });
 }
 
@@ -18,14 +18,14 @@ for (let button of operandButtons) {
         let clicked = `${e.target.id}`
         const p = document.createElement("p");
         p.innerText = clicked;
-        output.appendChild(p);
+        input.appendChild(p);
         button.removeEventListener("click");
     });
 
 }
 
 clear.addEventListener("click", () => {
-    output.innerText = "";
+    input.innerText = "";
 });
 
 equals.addEventListener("click", () => {
