@@ -36,6 +36,52 @@ function setOperation(operator) {
     resetScreen = true;
 }
 
+function evaluate() {
+    secondOperand = output.textContent;
+    output.textContent = round(operate(operation, firstOperand, secondOperand));
+    input.textContent = `${firstOperand} ${operation} ${secondOperand}`;
+}
+
+function round(num) {
+    return Math.round(num * 100) / 100;
+}
+
+function add(a, b) {
+    return a + b;
+}
+
+function minus(a, b) {
+    return a - b;
+}
+
+function product(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    return a / b;
+}
+
+function operate(operation, firstOperand, secondOperand) {
+    let a = Number(firstOperand);
+    let b = Number(secondOperand);
+    switch (operation) {
+        case "+":
+            return add(a, b);
+        case "-":
+            return minus(a, b);
+        case "X":
+            return product(a, b);
+        case "/":
+            if (b === "0") {
+                return null;
+            }
+            return divide(a, b);
+        default:
+            return;
+    }
+}
+
 clear.addEventListener("click", () => {
     input.innerText = "";
     output.innerText = 0;
@@ -44,10 +90,4 @@ clear.addEventListener("click", () => {
     operation = null;
 });
 
-equals.addEventListener("click", () => {
-    let equation = Array.from(output.innerHTML);
-    const p = document.querySelector("p");
-    let arr = ["<", ">", "p", "/"];
-    //equation.join(",");
-    console.log(equation);
-});
+equals.addEventListener("click", evaluate);
