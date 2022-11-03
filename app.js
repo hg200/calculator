@@ -1,31 +1,47 @@
+let firstOperand = '';
+let secondOperand = '';
+let operation = null;
+let resetScreen = false;
+
 const numButtons = Array.from(document.querySelectorAll(".num"));
 const operandButtons = Array.from(document.querySelectorAll(".operand"));
 const clear = document.querySelector("#clear");
 const equals = document.querySelector(".equals");
 const input = document.querySelector(".input");
 const output = document.querySelector(".output");
-for (let button of numButtons) {
-    button.addEventListener("click", (e) => {
-        let clicked = `${e.target.id}`
-        const p = document.createElement("p");
-        p.innerText = clicked;
-        input.appendChild(p);
-    });
+
+numButtons.forEach((button) =>
+    button.addEventListener("click", () => appendNum(button.textContent))
+)
+
+operandButtons.forEach((button) =>
+    button.addEventListener("click", () => setOperation(button.textContent))
+)
+
+function appendNum(Number) {
+    if (output.textContent === "0" || resetScreen)
+        reset();
+    output.textContent += Number;
 }
 
-for (let button of operandButtons) {
-    button.addEventListener("click", (e) => {
-        let clicked = `${e.target.id}`
-        const p = document.createElement("p");
-        p.innerText = clicked;
-        input.appendChild(p);
-        button.removeEventListener("click");
-    });
+function reset() {
+    output.textContent = '';
+    resetScreen = false;
+}
 
+function setOperation(operator) {
+    firstOperand = output.textContent;
+    operation = operator;
+    input.textContent = `${firstOperand} ${operation}`;
+    resetScreen = true;
 }
 
 clear.addEventListener("click", () => {
     input.innerText = "";
+    output.innerText = 0;
+    firstOperand = '';
+    secondOperand = '';
+    operation = null;
 });
 
 equals.addEventListener("click", () => {
