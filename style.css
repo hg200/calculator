@@ -28,24 +28,39 @@ button {
     align-items: center;
 }
 
+button:hover {
+    background-color: beige;
+}
+
+.screen:hover {
+    background-color: antiquewhite;
+}
+
 .screen {
     height: 150px;
     background-color: black;
     margin: 10px;
+    margin-bottom: 0px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     border-radius: 38.5pt;
-    gap: 30px;
+    gap: 20px;
 }
 
 .input {
+    display: flex;
     color: whitesmoke;
+    align-self: flex-end;
+    justify-self: flex-start;
     font-size: 30px;
     margin-right: 40px;
-    margin-top: 5px;
+    margin-top: 0px;
     font-style: italic;
+    max-height: 75px;
+    max-width: 75px;
 }
 
 .output {
@@ -62,7 +77,8 @@ button {
 
 .buttons {
     height: 430px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
