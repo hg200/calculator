@@ -10,6 +10,15 @@ const equals = document.querySelector(".equals");
 const input = document.querySelector(".input");
 const output = document.querySelector(".output");
 
+window.addEventListener("keydown", handlKeyboard);
+
+function handlKeyboard(e) {
+    if (e.key >= 0 && e.key <= 9) appendNum(e.key);
+    if (e.key === 'Escape') reset();
+    if (e.key === '=') evaluate();
+    if (e.key == '/' || e.key == '+' || e.key == 'x' || e.key == '-') setOperation(e.key);
+}
+
 numButtons.forEach((button) =>
     button.addEventListener("click", () => appendNum(button.textContent))
 )
@@ -17,6 +26,7 @@ numButtons.forEach((button) =>
 operandButtons.forEach((button) =>
     button.addEventListener("click", () => setOperation(button.textContent))
 )
+
 
 function appendNum(Number) {
     if (output.textContent === "0" || resetScreen)
