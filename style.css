@@ -50,7 +50,8 @@ button:hover {
     gap: 20px;
 }
 
-.input {
+
+/*.input {
     display: flex;
     color: whitesmoke;
     align-self: flex-end;
@@ -61,7 +62,7 @@ button:hover {
     font-style: italic;
     max-height: 75px;
     max-width: 75px;
-}
+}*/
 
 .output {
     font-size: 50px;
