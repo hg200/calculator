@@ -80,7 +80,7 @@ function operate(operation, firstOperand, secondOperand) {
             return add(a, b);
         case "-":
             return minus(a, b);
-        case "X":
+        case "x":
             return product(a, b);
         case "/":
             if (b === "0") {
