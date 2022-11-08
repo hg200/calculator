@@ -32,10 +32,6 @@ button:hover {
     background-color: beige;
 }
 
-.screen:hover {
-    background-color: antiquewhite;
-}
-
 .screen {
     height: 150px;
     background-color: black;
