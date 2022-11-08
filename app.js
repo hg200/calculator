@@ -14,7 +14,7 @@ window.addEventListener("keydown", handlKeyboard);
 
 function handlKeyboard(e) {
     if (e.key >= 0 && e.key <= 9) appendNum(e.key);
-    if (e.key === 'Escape') reset();
+    if (e.key === 'Escape') reload();
     if (e.key === '=') evaluate();
     if (e.key == '/' || e.key == '+' || e.key == 'x' || e.key == '-') setOperation(e.key);
 }
@@ -92,12 +92,15 @@ function operate(operation, firstOperand, secondOperand) {
     }
 }
 
-clear.addEventListener("click", () => {
+function reload() {
     input.innerText = "";
     output.innerText = 0;
     firstOperand = '';
     secondOperand = '';
     operation = null;
-});
+}
+
+clear.addEventListener("click", reload);
+
 
 equals.addEventListener("click", evaluate);
