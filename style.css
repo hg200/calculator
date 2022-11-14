@@ -1,5 +1,16 @@
+:root {
+    --calculator-bgclr: black;
+    --numbtn-clr: gainsboro;
+    --opbtn-clr: orange;
+    --clearbtn-clr: red;
+    --btn-text-clr: black;
+    --display-text-clr: whitesmoke;
+    --btn-hover-clr: beige;
+    --link-clr: red;
+}
+
 body {
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +20,7 @@ body {
 }
 
 .calculator {
-    background-color: black;
+    background-color: var(--calculator-bgclr);
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -19,7 +30,7 @@ body {
 }
 
 button {
-    background-color: gainsboro;
+    background-color: var(--numbtn-clr);
     width: 87.5px;
     height: 90px;
     font-size: 25px;
@@ -30,12 +41,12 @@ button {
 }
 
 button:hover {
-    background-color: beige;
+    background-color: var(--btn-hover-clr);
 }
 
 .screen {
     height: 150px;
-    background-color: black;
+    background-color: var(--calculator-bgclr);
     margin: 10px;
     margin-bottom: 0px;
     padding: 5px;
@@ -49,7 +60,7 @@ button:hover {
 
 .input {
     display: flex;
-    color: whitesmoke;
+    color: var(--display-text-clr);
     align-self: flex-end;
     justify-self: flex-start;
     font-size: 30px;
@@ -67,7 +78,7 @@ button:hover {
     padding-left: 40px;
     margin-left: 40px;
     margin-bottom: 5px;
-    color: whitesmoke;
+    color: var(--display-text-clr);
     max-height: 120px;
     max-width: 50vw;
     display: flex;
@@ -85,7 +96,7 @@ button:hover {
 }
 
 #clear {
-    background-color: red;
+    background-color: var(--clearbtn-clr);
     font-weight: 700;
     font-size: 20px;
 }
@@ -95,12 +106,12 @@ button:hover {
 .product,
 .divide,
 .equals {
-    background-color: orange;
+    background-color: var(--opbtn-clr);
 }
 
 a {
     text-decoration: none;
-    color: red;
+    color: var(--link-clr);
 }
 
 .footer {
