@@ -122,4 +122,5 @@ a {
 .footer {
     display: flex;
     align-self: center;
+    margin-top: 40px;
 }
