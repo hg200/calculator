@@ -41,6 +41,11 @@ button {
 }
 
 button:hover {
+    transform: translate(0px, 3px) scale(1);
+    transition: 0.1s ease-in;
+}
+
+button:hover {
     background-color: var(--btn-hover-clr);
 }
 
